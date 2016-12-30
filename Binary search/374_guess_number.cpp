@@ -7,11 +7,14 @@ class Solution {
 public:
     int guessNumber(int n) {
         int maxNumber = n, minNumber = 1;
-        while (true) {
+        while (true)
+        {
             int meanNumber = (maxNumber - minNumber) / 2 + minNumber;
+
             // Do NOT use (maxNumber+minNumber)/2 in case of over flow
             int res = guess(meanNumber);
-            if (res == 0) {
+            if (res == 0)
+            {
                 return meanNumber;
             } else if (res == 1) {
                 minNumber = meanNumber + 1;
