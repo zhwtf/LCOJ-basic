@@ -1,0 +1,2 @@
+# LCOJ-basic
+## basic algorithms
