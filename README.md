@@ -1,1 +1,0 @@
-# LCOJ-basic
