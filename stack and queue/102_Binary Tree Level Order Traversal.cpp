@@ -23,10 +23,10 @@ void buildVector(TreeNode *root, int depth)
 }
 
 
-    vector<vector<int>> levelOrder(TreeNode* root) {
+    vector< vector<int> > levelOrder(TreeNode* root) {
         buildVector(root, 0);
         return ret;
     }
 
-    
+
 };
