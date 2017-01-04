@@ -6,6 +6,12 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+
+ /**
+ First iteration to negate values at position whose equal to values appear in array.
+ Second iteration to collect all position whose value is positive,
+ which are the missing values. Complexity is O(n) Time and O(1) space.
+ */
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
