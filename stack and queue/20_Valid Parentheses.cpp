@@ -13,7 +13,7 @@ public:
                 if ((s[i] == ')' && hold.top() != '(') || (s[i] == ']' && hold.top() != '[') || (s[i] == '}' && hold.top() != '{')){
                     return false;
                 }
-            hold.pop();
+                hold.pop();
             }
         }
     return hold.empty();

@@ -2,6 +2,7 @@ class Queue {
 public:
     stack<int> stc;
     // Push element x to the back of queue.
+    //using recursive method
     void push(int x) {
         pushHelper(x);
     }
