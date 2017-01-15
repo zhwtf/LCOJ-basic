@@ -4,7 +4,14 @@ What if duplicates are allowed at most twice?
 
 '''
 
-
+//this solution can be easily generalized to "at most K duplicates"
+int removeDuplicates(vector<int>& nums, int k) {
+    int i = 0;
+    for (int n : nums)
+        if (i < k || n > nums[i-k])
+            nums[i++] = n;
+    return i;
+}
 
 class Solution {
 public:
@@ -28,4 +35,15 @@ int removeDuplicates(vector<int>& nums) {
 		}
 	}
 	return nums.size();
+}
+
+
+
+
+int removeDuplicates(vector<int>& nums) {
+    int n = nums.size(), count = 0;
+    for (int i = 2; i < n; i++)
+        if (nums[i] == nums[i - 2 - count]) count++;
+        else nums[i - count] = nums[i];
+    return n - count;
 }
