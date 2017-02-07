@@ -14,7 +14,25 @@ public:
 };
 
 
-
+class Solution {
+public:
+    vector<int> searchRange(vector<int>& nums, int target) {
+        vector<int> result = {-1, -1};
+        //if(nums == NULL) return vector<int>(2, -1);
+        if(find(nums.begin(), nums.end(), target) != nums.end()){
+            int pos = find(nums.begin(), nums.end(), target) - nums.begin();
+            int ind = pos+1;
+            while(ind < nums.size() && nums[ind] == target){
+                ind++;
+            }
+            ind--;
+            result[0] = pos;
+            result[1] = ind;
+            return result;
+        }
+        return result;
+    }
+};
 
 
 
